@@ -12,7 +12,7 @@ public:
 	int checkmap(string receiver, string nickname);
 	void showmap(string receiver, string nickname);
 	void sendmessage(string receiver, string nickname, string message);
-	void sendRequest(string message, string nickname, string receiver);
+	void sendRequest(string nickname, string receiver);
 
 protected:
 

@@ -33,7 +33,6 @@ int main()
         string password;
         string name;
         string receiver;
-        char message[100];
         int ind(0);
         
         switch (action)
@@ -53,8 +52,8 @@ int main()
                 cout << "Enter receiver" << endl;
                 cin >> receiver;
                 chatsinmap.showmap(receiver, nickname);
-                               
-                chatsinmap.sendRequest(message, nickname, receiver);
+                //Starting the process of receiving and answering messages from server               
+                chatsinmap.sendRequest(nickname, receiver);
                                     
                 break;
             }
