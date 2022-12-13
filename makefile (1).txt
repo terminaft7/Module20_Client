@@ -1,0 +1,21 @@
+# m20_client:	Source_Client.cpp
+# 	g++ -std=c++11 -o m20_server Source_Client.cpp -L.
+
+TARGET = client.out
+
+CC = g++
+CFLAGS = -std=c++11 -Wall -g
+
+SRCS = Source_Client.cpp Chatpool.cpp Message.cpp User.cpp Userpool.cpp
+OBJS = $(SRCS:.cpp=.o)
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CC) $(OBJS) -o $(TARGET) $(CFLAGS)
+
+%.o: %.cpp
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+clean:
+	rm *.o *.out
